@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<table>
+    <tr align="center">
+        <td><h2>Amount</h2></td>
+        <td><h2>From Currency</h2></td>
+        <td><h2>To Currency</h2></td>
+        <td></td>
+    </tr>
+    <tr align="center">
+        <td><input id = "amount" ><br></td>
+        <td><select id = "fc">
+            <option>Vietnam</option>
+            <option>USD</option>
+        </select></td>
+        <td><select id = "tc">
+            <option>USD</option>
+            <option>VietNam</option>
+        </select></td>
+        <td><button onclick = "convertCur()">Convert</button></td>
+    </tr>
+</table>
+
+<script>
+    function convertCur() {
+            let a = parseInt(document.getElementById("amount").value);
+            let f = document.getElementById("fc").value;
+            let t = document.getElementById("tc").value;
+            if(f == t)
+                alert(a);
+            else
+                if(f == "USD")
+                    alert(a*23000);
+                else
+                    alert(a/23000);
+    }
+</script>
+
+</body>
+</html>
